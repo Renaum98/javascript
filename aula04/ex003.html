@@ -31,9 +31,23 @@
     </article> 
 
     <script>
-       //window.alert('minha primeira mensagem') //cria um alerta
-       //window.confirm('esta gostando de js?') //cria uma caixa de confirmação
-       window.prompt('qual é seu nome?') //cria uma caixa onde é possivel preencher e enviar um texto 
+        var n1 = Number(window.prompt ('Digite um numero: '))
+        var n2 = Number(window.prompt ('Digite outo numero: '))
+        
+        var s = n1 + n2
+
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+        
+       
+        // (number + number) para adição
+        // (string + string) para concatenação
+
+        /* Para conversão de um identificador string para number use:
+        Number.parseInt : para um numero inteiro
+        Number.parseFloat : para um numero real ou parcial ex 0,5
+        Number : Para numeros no geral */
+
+        /*Usando a crase `e o place holder ${} com a var é possivel de forma mais facil formatar um string */
     </script>
 </body>
 </html>
