@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        body {
+            font: normal 1.3em arial;
+            width: 100vw;
+            height: 100vh;
+        }
+        main {
+            background-image: linear-gradient(to bottom,red , darkred);
+            color: white;
+            text-align: center;
+            width: 400px;
+            height: 400px;
+            border-radius: 20px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #txtvel{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <H1>Sistema de Multas</H1>
+        
+    </main>
+
+    <script>
+        function calcular() {
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> km/h</p>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Você foi <strong>Multado</strong> por excesso de velocidade</p>`//o simbolo de += representa a concatenização dos paragrafos 
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>
