@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de Teste</title>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>
+    <p>Vivendo em ?</p> 
+    
+    <p><input type="text" name="pais"  id="pais"></p>
+
+    <input type="button" value="Verificar" onclick="verificar()">
+    
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var pais = document.querySelector('input#pais')
+            var res = document.querySelector('div#res')
+            var pais = String(pais.value)
+            
+            if (pais == 'Brasil') {
+                res.innerHTML = `<P>Você é <strong>Brasileiro</strong></P>`
+            } else { 
+                res.innerHTML = `<p>Você é <strong>Estrangeiro</strong></p> `  
+            }
+        }
+    </script>
+</body>
+</html>
