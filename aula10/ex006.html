@@ -13,16 +13,44 @@
             height: 200px;
             line-height: 200px;
             text-align: center;
+            border-radius: 20px;
         }
     </style>
 </head>
 <body>
     <div id="area">
-    interaja...
+    Interaja...
     </div>
 
     <script>
+        var a = document.getElementById ('area')
+        
+        a.addEventListener('click', clicar) /*a sintaxe para fazer um evento em script é : 
+        a = a variação criada a cima que puxa o id 'area'
+        addEventListener = a adição de um evento que você deseja
+        'click' = o evento selecionado para ocorrer
+        clicar = o nome que foi dado para esse evento ocorrer escolhido por mim
+        fazendo assim, é possivel acionar o evento de clicar com o function clicar(aqui são parametros para aplicação do evento que são opcionais) {colocar aqui oque vai ocorrer quando for disparado essa função}*/
+        
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
 
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red' /*aqui foi acionado o evento de que quando for clicado na var(variação) a, ele vai mudar a cor de fundo para vermelho seguindo essa sequencia de 
+            a = variação
+            style = estilo do css 
+            backgroud = alterando o fundo
+            'red' = cor que ira apresentar assim que clicar*/
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'blue'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
     </script>
 </body>
 </html>
