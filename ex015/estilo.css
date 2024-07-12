@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    background-color: lightblue;
+    background-color: rgb(60, 183, 224);
     font: normal 1.3em arial;
 }
 
@@ -10,7 +10,6 @@ header {
     text-align: center;
 
 }
-
 section {
     background-color: white;
     border-radius: 20px;
@@ -19,11 +18,18 @@ section {
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.34);
 }
+div {
+    text-align: center;
+}
+#button {
+    border-radius: 20px;
+    padding: 5px;
+    background-color: rgb(52, 50, 103);
+    color: white;
+}
+
 footer{
     color: white;
     text-align: center;
     font-style: italic;
-}
-strong {
-    color: blue;
 }
