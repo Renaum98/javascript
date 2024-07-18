@@ -1,3 +1,6 @@
+{
+    "miramac.node.showInfo"; true
+  }
 /*Estrutura de Repetição de Teste Variavel 
 com esse metodo o teste recebe um 'inicio, teste, incremento' que significa que sempre que o teste for verdadeiro com base no teste, ele ira repetir com o incremento, assim que o teste for falso então ele encerra o teste logico*/
 
