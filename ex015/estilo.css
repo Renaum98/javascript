@@ -21,6 +21,11 @@ section {
 div {
     text-align: center;
 }
+#foto {
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.181);
+}
 #button {
     border-radius: 20px;
     padding: 5px;
