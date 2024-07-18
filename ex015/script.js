@@ -8,11 +8,11 @@ function verificar() {
     } else {
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
-        var genero = ''
+        var genero = ''// aqui a variação 'genero' não recebe nada pois mais pra frente vai ser definido oque é 
         var img = document.createElement('img') //com o create Element se cria o elemento img que serve para atribuir uma imagem
         img.setAttribute('id', 'foto') //aqui foi designado com o setAttribute um id para o elemento img como 'foto' para ser usado posteriormente em css 
         
-        if (fsex[0].checked) {
+        if (fsex[0].checked) { // o 0 representa a posição que ele esta no name'radsex', seguindo por 1 que resenta o segundo numero na ordem 
             genero = 'Homem'
             if (idade >=0 && idade <10) {
                 //criança
