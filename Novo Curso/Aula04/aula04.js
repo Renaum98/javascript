@@ -29,5 +29,6 @@ let meses1 = meses.splice(1, 2)
 //VER TAMANHO DO ARRAY lenth comprimento
 meses.lenth()
 
-//spreed operator ...
+//spreed operator ... copiar
 let teste = [...produtos, 'Ovo', 'Pera']
+let test = []
