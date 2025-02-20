@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: #ccc;
+        }
+        main{
+            min-width: 960px;
+            min-height: 100vh;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+        }
+        section{
+            width: 960px;
+            margin: 0 auto;
+        }
+        h1, section, article{
+            margin-bottom: 1rem;
+        }
+        #botoes{
+            margin-bottom: 1rem;
+        }
+        button{
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 0.625rem;
+           
+            cursor: pointer;
+        }
+        #btlight{
+            background: #ededed;
+            color: #121212;
+        }
+        #btdark{
+            background: #263238;
+            color: #fff;
+        }
+        .box{
+            padding: 0.625rem;
+            border-radius: 8px;
+        }
+        .light{
+            background: #fff;
+            color: #191919;
+        }
+        .dark{
+            background: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <main class="principal">
+        <h1>Aula 09</h1>
+        <span id="botoes">
+            <button class="modos" id="btlight">Light</button>
+            <button class="modos" id="btdark">Dark</button>
+        </span>
+        <section id="conteudos">
+            <article class="box">
+                <h2>Imagem</h2>
+                <figure>
+                    <img src="#" alt="foto" id="foto">
+                </figure>
+                <p>Texto de teste 1 em parágrafo</p>
+            </article>
+            <article class="box">
+                <h2>Titulo</h2>
+                <p>Texto de teste em parágrafo</p>
+            </article>
+        </section>
+    </main>
+    
+    <script>
+        let titulo = document.querySelector('h1')
+        titulo.textContent = 'Aula 09 com JS'
+        titulo.innerHTML = 'Aula 09 Alterado' //faz o mesmo de textContent alterando o conteudo dentro do HTML 
+        let imagem = document.querySelector('#foto')
+        imagem.setAttribute('src','foto.jpg') //usado para adicionar um atributo 
+        imagem.setAttribute('width', '100px') // outro exemplo de uso para adicionar atributo e alterar usando JS 
+
+        /*Manipulando CSS*/
+
+        document.querySelector('h1').style.color = 'red'//usando um metodo direto de style e depois o atributo a ser alterado
+        titulo.style.background = "#272727"
+        titulo.style.borderRadius = '10px' //quando o atributo tem um nome composto, é usado o camel case para diferenciar 
+        titulo.style.borderBottom = "3px double red"
+
+        let box 
+    </script>
+</body>
+</html>

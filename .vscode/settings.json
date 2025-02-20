@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/Aulas Curso em Video/Aulas/Aula1.html"
+    "livePreview.defaultPreviewPath": "/Aulas Curso em Video/Aulas/Aula1.html",
+    "editor.wordWrap": "on"
 }
