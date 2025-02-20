@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12</title>
+</head>
+<body>
+    <main>
+        <h1>Estruturas de Desvio</h1>
+        <h2>Condicionais</h2>
+        <hr>
+        <hr>
+        <p>if(),if()else,if()else if()else</p>
+
+        <div class="campo"></div>
+    </main>
+    <script>
+        let campo = document.querySelector('.campo')
+        let n1 = 7
+        let n2 = 10
+        let n3 = 8
+        let media = (n1+n2+n3) / 3
+
+        if (media >= 7) {
+            campo.innerHTML =`Sua média foi ${media.toFixed(2)} <br> Voce foi aprovado`
+        }
+        else if (media < 5) {
+            campo.textContent =`Sua média foi ${media.toFixed(2)}<br>
+            Voce foi REPROVADO`
+        }else{
+            campo.innerHTML = `Sua média foi ${media.toFixed(2)}<br>
+            Voce esta em RECUPERAÇÃO`
+        }
+        
+    </script>
+</body>
+</html>

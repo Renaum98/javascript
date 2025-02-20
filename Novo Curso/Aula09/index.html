@@ -59,6 +59,11 @@
             background: #222;
             color: #fff;
         }
+        /*Usado no JS*/
+        .azul{
+            background-color: blue;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -98,7 +103,27 @@
         titulo.style.borderRadius = '10px' //quando o atributo tem um nome composto, é usado o camel case para diferenciar 
         titulo.style.borderBottom = "3px double red"
 
-        let box 
+        let box = document.querySelectorAll('.box')
+        box[0].setAttribute('class','azul')
+        //box[0].removeAttribute('class')
+        
+        let tela = document.querySelector('main')
+        let btnDark = document.querySelector('#btdark')
+        let btnLight = document.querySelector('#btlight')
+
+        btnDark.addEventListener('click',modoDark)
+        btnLight.addEventListener('click',modoLight)
+
+        function modoDark() {
+            console.log('modo dark')
+            tela.classList.add('dark');
+            tela.classList.remove('light');
+        }
+        function modoLight() {
+            console.log('modo light')
+            tela.classList.add('light');
+            tela.classList.remove('dark');
+        }
     </script>
 </body>
 </html>

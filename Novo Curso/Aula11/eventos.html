@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box{
+            font-size: 2rem;
+            width: 300px;
+            height: 300px;
+            border: 5px double #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="box" >Nada</div>
+    <script>
+        let caixa = document.querySelector('#box')
+        caixa.addEventListener('click',function (){
+            caixa.innerText = 'Clicou'
+            caixa.style.background = "red"
+            caixa.style.color = "white"
+            caixa.style.height = '600px'
+            caixa.style.width = '300px'
+            caixa.style.transition = '0.5s'
+            caixa.style.borderRadius = '20px'
+        })
+        caixa.addEventListener('mouseover',function(){
+            caixa.innerHTML = 'Passou o Mouse'
+            caixa.style.background = "blue"
+            caixa.style.transition = '0.5s'
+            caixa.style.color = "white"
+            caixa.style.borderRadius = '20px'
+            caixa.style.width = '400px'
+            caixa.style.height = "400px"
+        })
+        caixa.addEventListener('mouseleave',function(){
+            caixa.innerHTML = 'Tirou o mouse'
+            caixa.style.background = "green"
+            caixa.style.color = "white"
+            caixa.style.width = '300px'
+            caixa.style.height = "300px"
+        })
+        caixa.addEventListener('dblclick',function(){
+            caixa.innerHTML = 'Clicou 2 vezes'
+            caixa.style.background = "purple"
+            caixa.style.color = "white"
+            caixa.style.width = '600px'
+            caixa.style.height = "300px"
+            caixa.style.transition = '0.5s'
+            caixa.style.borderRadius = '20px'
+
+        })
+    </script>
+</body>
+</html>

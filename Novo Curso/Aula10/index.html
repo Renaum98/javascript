@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula0 10</title>
+</head>
+<body>
+    <main>
+        <!--Funções-->
+        <h1>Aula 10</h1>
+        <section class="box"></section>
+        <section class="box"></section>
+        <section class="box"></section>
+        <section class="box"></section>
+        <section class="box"></section>
+        <h3>Abaixo é JS</h3>
+
+        <script>
+            let titulo = document.querySelector('h1')
+            titulo.innerHTML = 'Funções no JS'
+            let box = document.querySelectorAll('.box')
+
+            /*(procedure)*/
+            function olaMundo() {
+                document.write('Ola mundo sem retorno<br>')
+            }
+            //(function)
+            function olaMundo2(){
+                return 'Ola mundo com retorno<br>'
+            }
+            //Chamar a função
+            olaMundo()
+            document.write(olaMundo2())
+
+            function somar(a,b) {
+                document.write(`<p>A soma de ${a} e ${b} é igual a ${a+b}</p>`)
+            }
+
+            somar(3,5)
+
+            let x = 10
+            let y = 11
+            somar(x,y)
+
+            titulo.addEventListener('click', function(){
+                alert('Clicou no titulo')
+            })//função anonima
+
+            //Arrow functions
+            const olaMundoArrow = () => document.write('Ola mundo')
+
+            const olaMundoArrow2 = () => '<p>Ola mundo com arrow function</p>'
+
+            olaMundoArrow()
+            document.write(olaMundoArrow2())
+        </script>
+    </main>
+</body>
+</html>
