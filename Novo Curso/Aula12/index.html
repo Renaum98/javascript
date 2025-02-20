@@ -17,20 +17,19 @@
     </main>
     <script>
         let campo = document.querySelector('.campo')
-        let n1 = 7
-        let n2 = 10
-        let n3 = 8
-        let media = (n1+n2+n3) / 3
+        let n1 = 1
+        let n2 = 2
+        let n3 = 5
+        let n4 = 10
+        let media = (n1+n2+n3+n4) / 3
 
         if (media >= 7) {
-            campo.innerHTML =`Sua média foi ${media.toFixed(2)} <br> Voce foi aprovado`
+            campo.innerHTML =`Sua média foi ${media.toFixed(2)}<br>Você foi <strong>APROVADO</strong>`
         }
         else if (media < 5) {
-            campo.textContent =`Sua média foi ${media.toFixed(2)}<br>
-            Voce foi REPROVADO`
+            campo.innerHTML =`Sua média foi ${media.toFixed(2)}<br>Você foi <strong>REPROVADO</strong>`
         }else{
-            campo.innerHTML = `Sua média foi ${media.toFixed(2)}<br>
-            Voce esta em RECUPERAÇÃO`
+            campo.innerHTML = `Sua média foi ${media.toFixed(2)}<br>Você esta em <strong>RECUPERAÇÃO</strong>`
         }
         
     </script>
