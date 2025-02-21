@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 12</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -14,23 +19,51 @@
         <p>if(),if()else,if()else if()else</p>
 
         <div class="campo"></div>
+        <div class="escolha"></div>
+        <hr>
+        <hr>
+
     </main>
     <script>
         let campo = document.querySelector('.campo')
-        let n1 = 1
-        let n2 = 2
-        let n3 = 5
-        let n4 = 10
-        let media = (n1+n2+n3+n4) / 3
+        let n1 = 5
+        let n2 = 7
+        let media = (n1+n2) / 2
 
         if (media >= 7) {
-            campo.innerHTML =`Sua média foi ${media.toFixed(2)}<br>Você foi <strong>APROVADO</strong>`
+            campo.innerHTML =`<strong>APROVADO</strong>`
+            campo = 'APROVADO'
         }
         else if (media < 5) {
-            campo.innerHTML =`Sua média foi ${media.toFixed(2)}<br>Você foi <strong>REPROVADO</strong>`
+            campo.innerHTML =`<strong>REPROVADO</strong>`
+            campo = 'REPROVADO'
         }else{
-            campo.innerHTML = `Sua média foi ${media.toFixed(2)}<br>Você esta em <strong>RECUPERAÇÃO</strong>`
+            campo.innerHTML = `<strong>RECUPERAÇÃO</strong>`
+            campo = 'RECUPERAÇÃO'
         }
+        let escolha = document.querySelector('.escolha') 
+
+        //Usando o switch case
+        switch (campo) {
+            case 'APROVADO':
+                escolha.innerHTML = 'Parabens você conseguiu'
+                break;
+            case 'REPROVADO':
+                escolha.innerHTML = 'Voce não passou, estude mais'
+                break;
+            case 'RECUPERAÇÃO':
+                escolha.innerHTML = 'Estude mais'
+                break;
+            default:
+                escolha.innerHTML = 'oi'
+        }/*usando o switch case que significa: 
+        escolha (campo que deseja analisar){
+            caso 'conteudo seja verdadeiro':
+                oque ira acontecer caso for verdadeiro
+                break ira parar quando for verdadeiro
+            default:
+                ira acontecer caso nenhum dos 'casos' forem verdadeiros
+        }*/
         
     </script>
 </body>
