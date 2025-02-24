@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d6d6d6;
+        }
+        main{
+            width: 60%;
+            height: 60%;
+            margin: auto;
+            border-radius: 10px;
+            background-color: lightgreen;
+            padding: 10px;
+            border: 3px double rgba(128, 128, 128, 0.362);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.381),-10px -10px 20px rgba(255, 255, 255, 0.381);
+        }
+        h1{
+            text-align: center;
+            color: rgba(0, 0, 0, 0.688);
+        }
+        section{
+            font-size: 1.3rem;
+            width: 70%;
+            background-color: rgba(224, 255, 255, 0.34);
+            color: rgba(0, 0, 0, 0.559);
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 20px;
+            border: 3px double rgba(128, 128, 128, 0.362);
+            display: flex;
+            flex-flow: column;
+        }
+        .botoes{
+            margin: 20px 0px;
+            text-align: center;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        input{
+            font-size: 1.3rem;
+            border: none;
+            border-bottom:1px solid rgba(128, 128, 128, 0.362);
+            background-color: transparent;
+        }
+        #sit{
+            text-align: center;
+            background-color: rgba(224, 255, 255, 0.34);
+            padding: 5px;
+            color: rgba(0, 0, 0, 0.559);
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculo de Média</h1>
+        <form action="#" method="post" id="formulario">
+            <section>
+                <label for="idNota1">Nota 01</label>
+                <input 
+                type="number"
+                name="nota1"
+                id="idNota1"
+                min="0.0"
+                max="10.0"
+                step="0.5">
+            </section>
+            <section>
+                <label for="idNota2">Nota 02</label>
+                <input 
+                type="number"
+                name="nota2"
+                id="idNota2"
+                min="0.0"
+                max="10.0"
+                step="0.5">
+            </section>
+            <div class="botoes">
+                <button type="submit" id="idEnviar">Verificar</button>
+                <button type="reset">Limpar</button>
+            </div>
+            <section>
+                <label for="idMedia">
+                    Média
+                </label>
+                <input 
+                type="number" 
+                name="media" 
+                id="idMedia"
+                min="0.0"
+                max="10.0"
+                disabled>
+            </section>
+        </form>
+        <p id="sit">Situação</p>
+    </main>
+    <script>
+        let cxForm = document.querySelector('#formulario')
+        let cxN1 = document.querySelector('#idNota1')
+        let cxN2 = document.querySelector('#idNota2')
+        let cxMedia = document.querySelector('#idMedia')
+        let cxSit = document.querySelector('#sit')
+        let cxEnviar = document.querySelector('#idEnviar')
+
+        console.log(cxForm);
+        console.log(cxN1);
+        console.log(cxN2);
+        console.log(cxMedia);
+        console.log(cxSit);
+
+        cxEnviar.addEventListener('click',function(e){
+            let n1 = cxN1.value
+            let n2 = cxN2.value
+            let media = ((n1+n2)/2)
+            cxMedia.textContent = media //corrigir
+        })
+
+    </script>
+</body>
+</html>
