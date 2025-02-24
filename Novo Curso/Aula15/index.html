@@ -17,10 +17,11 @@
             justify-content: center;
             align-items: center;
             background-color: #d6d6d6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         main{
             width: 60%;
-            height: 60%;
+            height: 70%;
             margin: auto;
             border-radius: 10px;
             background-color: lightgreen;
@@ -127,12 +128,27 @@
         console.log(cxMedia);
         console.log(cxSit);
 
-        cxEnviar.addEventListener('click',function(e){
-            let n1 = cxN1.value
-            let n2 = cxN2.value
-            let media = ((n1+n2)/2)
-            cxMedia.textContent = media //corrigir
-        })
+        cxEnviar.addEventListener('click', function(e) {
+            e.preventDefault(); // Impede o envio do formulário
+            let n1 = parseFloat(cxN1.value); // Converte para número
+            let n2 = parseFloat(cxN2.value); // Converte para número
+            let media = ((n1 + n2) / 2);
+            cxMedia.value = media; // Corrigido: atribui o valor ao campo de entrada
+
+            // Atualiza a situação com base na média
+            if (media >= 7) {
+                cxSit.textContent = "Aprovado";
+                cxSit.style.backgroundColor = "lightgreen";
+            } 
+            else if (media < 7 || media >= 5){
+                cxSit.textContent = "Recuperação";
+                cxSit.style.backgroundColor = 'lightyellow';
+            }
+            else {
+                cxSit.textContent = "Reprovado";
+                cxSit.style.backgroundColor = "lightcoral";
+            }
+        });
 
     </script>
 </body>
