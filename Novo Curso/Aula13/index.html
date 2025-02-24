@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13 de JS</title>
+    <style></style>
+</head>
+<body>
+    <main id="tela-principal">
+        <h1>Estruturas de Repetição</h1>
+        <section class="conteudos"></section>
+    </main>
+    <script>
+        let carros = ['Fusca','Brasilia','Gurgel']
+        //for = para Faça
+        //i = iterador, interação ou index
+        //para que o laço for funcione precisam ser passados 3 parametros, o primeiro é o iterador, o segundo sera uma condição pra que ele ocorra, o terceiro o incremento ou decremento
+
+        document.write(`<h3>Estrutura For</h3>`)
+        for (let i = 1; i <= 5; i++){
+            document.write(i,' ')
+        }
+
+        document.write(`<br>`)
+
+        for (let i = 5; i >= 1; i--){
+            document.write(i,' ')
+        }
+        document.write(`<br>`)
+
+        for(let i = 0; i < carros.length; i++){
+            document.write(`<li>${carros[i]}</li>`)
+        }
+        document.write(`<hr>`)
+        //Metodo forEach = para cada
+        document.write(`<h3>Método forEach</h3>`)
+        let frutas = ['Pera','Uva','Maçã','Banana','Melancia']
+        //Para o metodo funcionar é preciso passar uma função anonima com um parametro, o primeiro é a variavel com array que deseja percorrer, o segundo é o encremento e opcional caso queira mostrar em que posição do index se encontra cada
+        frutas.forEach(function(fruta, i){
+            document.write(`${i} ${fruta} <br>`)
+        })
+        document.write(`<br>`)
+        carros.forEach(function(carros){
+            document.write(`${carros} <br>`)
+        })
+        document.write(`<hr>`)
+        document.write(`<h3>Estrutura while</h3>`)
+        //Metodo while = enquanto
+        let cont = 0
+        //com o while é possivel criar uma repetição simples com uma condicional que é enquanto for verdadeiro o parametro passado algum evento ira ocorrer
+
+        while(cont < frutas.length){
+            document.write(frutas[cont],'<br>')
+            cont++
+        }
+        document.write(`<hr>`)
+        document.write(`<h3>Estrutura do while</h3>`)
+        // do while = faça enquanto
+        //Com a estrutura do while ele ira realizar a ação pelo menos uma vez pra so assim depois verificar se é verdadeiro ou não, sao seja falso ele ira parar
+        let iterador = 0
+        do {
+            document.write(`<p>${iterador+1}-${carros[iterador]}</p>`)
+            iterador++
+            
+        } while (iterador < carros.length);
+    </script>
+</body>
+</html>
