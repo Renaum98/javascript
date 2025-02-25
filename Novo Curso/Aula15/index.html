@@ -35,7 +35,7 @@
         }
         section{
             font-size: 1.3rem;
-            width: 70%;
+            width: 30%;
             background-color: rgba(224, 255, 255, 0.34);
             color: rgba(0, 0, 0, 0.559);
             padding: 10px;
@@ -62,9 +62,12 @@
             background-color: transparent;
         }
         #sit{
+            width: 30%;
             text-align: center;
             background-color: rgba(224, 255, 255, 0.34);
-            padding: 5px;
+            padding: 10px;
+            margin: 20px auto;
+            border: 3px double rgba(128, 128, 128, 0.362);
             color: rgba(0, 0, 0, 0.559);
             border-radius: 10px;
         }
@@ -132,21 +135,25 @@
             e.preventDefault(); // Impede o envio do formulário
             let n1 = parseFloat(cxN1.value); // Converte para número
             let n2 = parseFloat(cxN2.value); // Converte para número
-            let media = ((n1 + n2) / 2);
-            cxMedia.value = media; // Corrigido: atribui o valor ao campo de entrada
+            if (n1 > 10 || n1 < 0 || n2 > 10 || n1 < 0){
+                alert('Digite um valor de 0 a 10!!')
+            }else{
+                let media = ((n1 + n2) / 2);
+                cxMedia.value = media; // Corrigido: atribui o valor ao campo de entrada
 
-            // Atualiza a situação com base na média
-            if (media >= 7) {
-                cxSit.textContent = "Aprovado";
-                cxSit.style.backgroundColor = "lightgreen";
-            } 
-            else if (media < 7 || media >= 5){
-                cxSit.textContent = "Recuperação";
-                cxSit.style.backgroundColor = 'lightyellow';
-            }
-            else {
-                cxSit.textContent = "Reprovado";
-                cxSit.style.backgroundColor = "lightcoral";
+                // Atualiza a situação com base na média
+                if (media >= 7) {
+                    cxSit.textContent = "Aprovado";
+                    cxSit.style.backgroundColor = "lightgreen";
+                } 
+                else if (media >= 5 || media < 7){
+                    cxSit.textContent = "Recuperação";
+                    cxSit.style.backgroundColor = 'lightyellow';
+                }
+                else {
+                    cxSit.textContent = "Reprovado";
+                    cxSit.style.backgroundColor = "lightcoral";
+                }
             }
         });
 
