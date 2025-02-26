@@ -16,17 +16,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #d6d6d6;
+            background-color: #c9c8c8;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
         }
         main{
+            min-width: 300px;
             width: 60%;
-            height: 70%;
+            height: 80%;
             margin: auto;
             border-radius: 10px;
             background-color: lightgreen;
             padding: 10px;
-            border: 3px double rgba(128, 128, 128, 0.362);
             box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.381),-10px -10px 20px rgba(255, 255, 255, 0.381);
         }
         h1{
@@ -36,6 +37,7 @@
         section{
             font-size: 1.3rem;
             width: 30%;
+            min-width: 200px;
             background-color: rgba(224, 255, 255, 0.34);
             color: rgba(0, 0, 0, 0.559);
             padding: 10px;
@@ -52,9 +54,44 @@
         button{
             padding: 10px;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
+            background-color: rgb(79, 148, 67);
+            color: whitesmoke;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
+        button::before{
+            content:'';
+            height: 2px;
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        button::after{
+            content:'';
+            height: 2px;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        button:hover::before{
+            animation: borda 0.2s linear forwards;
+        }
+        button:hover::after{
+            animation: borda 0.2s linear forwards;  
+        }
+        @keyframes borda{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+
         input{
             font-size: 1.3rem;
             border: none;
@@ -62,6 +99,7 @@
             background-color: transparent;
         }
         #sit{
+            min-width: 100px;
             width: 30%;
             text-align: center;
             background-color: rgba(224, 255, 255, 0.34);
@@ -144,9 +182,9 @@
                 // Atualiza a situação com base na média
                 if (media >= 7) {
                     cxSit.textContent = "Aprovado";
-                    cxSit.style.backgroundColor = "lightgreen";
+                    cxSit.style.backgroundColor = "rgba(224, 255, 255, 0.34)";
                 } 
-                else if (media >= 5 || media < 7){
+                else if (media >= 5 && media < 7){
                     cxSit.textContent = "Recuperação";
                     cxSit.style.backgroundColor = 'lightyellow';
                 }
